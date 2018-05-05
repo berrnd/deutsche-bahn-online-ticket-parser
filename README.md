@@ -3,7 +3,7 @@ A little PowerShell script to parse Deutsche Bahn Online-Ticket PDFs
 
 ## Why?
 I needed this, because I had a whole lot of tickets in PDF form and I wanted to have
-a list with the information for my Einkommensteuererklärung - unfortunetely, Deutsche Bahn
+a list with the information for my Einkommensteuererklärung - unfortunately, Deutsche Bahn
 does not provide any API or something for this - we call this Digitalisierung.
 
 This script reads Deutsche Bahn Online-Ticket PDFs from a folder,
