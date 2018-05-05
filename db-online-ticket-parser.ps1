@@ -58,11 +58,11 @@ ForEach ($file in Get-ChildItem -Path $FOLDER -Recurse -Filter $FILTER | Sort-Ob
 		}
 		if ($ticketType -eq $null -and $line.Split(":")[0].Contains("ltigkeit")) #Comparison to "Gültigkeit" does not work however
 		{
-			$ticketType = $pageLines[$lineIndex + 1]
+			$ticketType = $pageLines[$lineIndex + 1].Replace("(", "").Replace(")", "")
 		}
 		if ($reisende -eq $null -and $line.StartsWith("Erw:"))
 		{
-			$reisende = $line.Replace("Erw: ", "")
+			$reisende = $line.Replace("Erw: ", "").Replace(",", "")
 		}
 	}
 	$pdfReader.Close()
