@@ -19,7 +19,7 @@ Add-Type -Path itextsharp.dll
 ForEach ($file in Get-ChildItem -Path $FOLDER -Recurse -Filter $FILTER | Sort-Object Name)
 {
 	$auftrag = $null
-	$summe = $null
+	$preis = $null
 	$hinfahrt = $null
 	$rueckfahrt = $null
 	$datum = $null
@@ -37,10 +37,10 @@ ForEach ($file in Get-ChildItem -Path $FOLDER -Recurse -Filter $FILTER | Sort-Ob
 		{
 			$auftrag = $line.Split(" ")[1]
 		}
-		if ($summe -eq $null -and $line.StartsWith("Summe"))
+		if ($preis -eq $null -and $line.StartsWith("Summe"))
 		{
-			$summe = $line.Split(" ")[1]
-			$summe = $summe.Remove($summe.Length - 1) #Remove Euro symbol at the end
+			$preis = $line.Split(" ")[1]
+			$preis = $preis.Remove($preis.Length - 1) #Remove Euro symbol at the end
 		}
 		if ($hinfahrt -eq $null -and $line.StartsWith("Hinfahrt"))
 		{
@@ -68,7 +68,7 @@ ForEach ($file in Get-ChildItem -Path $FOLDER -Recurse -Filter $FILTER | Sort-Ob
 	$pdfReader.Close()
 
 	Write-Host "Auftrag: $auftrag"
-	Write-Host "Summe: $summe"
+	Write-Host "Preis: $preis"
 	Write-Host "Hinfahrt: $hinfahrt"
 	if ($rueckfahrt -ne $null)
  	{
@@ -85,8 +85,8 @@ ForEach ($file in Get-ChildItem -Path $FOLDER -Recurse -Filter $FILTER | Sort-Ob
  	{
 		$strecke += " und $rueckfahrt"
 	}
-	$bezeichnung = "$ticketType (Reisende: $reisende, Strecke: $strecke, Auftragsnummer: $auftrag)"
-	$csvLine = "$datum	$bezeichnung	$summe"
+	$bezeichnung = "Bahn Fahrkarte (Typ: $ticketType, Reisende: $reisende, Strecke: $strecke, Auftragsnummer: $auftrag)"
+	$csvLine = "$datum	$bezeichnung	$preis"
 	$csvLine | Out-File -Append $OUTPUTFILE
 }
 

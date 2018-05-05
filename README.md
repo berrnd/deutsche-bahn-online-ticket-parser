@@ -31,8 +31,8 @@ Reisende: 1, mit 1 BC50
 
 ## Example CSV file
 ```
-11.10.2017	Flexpreis (Hin- und Rückfahrt) (Reisende: 1, mit 1 BC50, Strecke: Bobingen -> Egling und Egling -> Bobingen, Auftragsnummer: SXXXXQ)	8,80
-12.10.2017	Flexpreis (Einfache Fahrt) (Reisende: 1, mit 1 BC50, Strecke: Bobingen -> Egling, Auftragsnummer: NXXXXD)	4,40
+11.10.2017	Bahn Fahrkarte (Typ: Flexpreis (Hin- und Rückfahrt), Reisende: 1, mit 1 BC50, Strecke: Bobingen -> Egling und Egling -> Bobingen, Auftragsnummer: SXXXXQ)	8,80
+12.10.2017	Bahn Fahrkarte (Typ: Flexpreis (Einfache Fahrt), Reisende: 1, mit 1 BC50, Strecke: Bobingen -> Egling, Auftragsnummer: NXXXXD)	4,40
 ```
 
 ## Credits
