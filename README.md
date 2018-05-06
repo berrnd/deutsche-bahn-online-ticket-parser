@@ -26,7 +26,7 @@ Preis: 4,40
 Hinfahrt: Bobingen -> Egling
 Datum: 12.10.2017
 Ticket-Typ: Flexpreis (Einfache Fahrt)
-Reisende: 1, mit 1 BC50
+Reisende: 1 mit 1 BC50
 ```
 
 ## Example CSV file
