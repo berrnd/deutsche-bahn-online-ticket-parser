@@ -13,16 +13,16 @@ extracts various information and writes to them to the specified CSV file
 ## Example output
 ```
 Auftrag: SXXXXQ
-Summe: 8,80
+Preis: 8,80
 Hinfahrt: Bobingen -> Egling
 Rueckfahrt: Egling -> Bobingen
 Datum: 11.10.2017
 Ticket-Typ: Flexpreis (Hin- und Rückfahrt)
-Reisende: 1, mit 1 BC50
+Reisende: 1 mit 1 BC50
 
 
 Auftrag: NXXXXD
-Summe: 4,40
+Preis: 4,40
 Hinfahrt: Bobingen -> Egling
 Datum: 12.10.2017
 Ticket-Typ: Flexpreis (Einfache Fahrt)
